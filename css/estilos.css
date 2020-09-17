@@ -1,0 +1,39 @@
+
+body{
+  background-color: #bcc6cd;
+}
+.menu{
+  background-color: #4e5255;
+  font-family: 'Montserrat', sans-serif;
+  font
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+}
+.neumo{
+  border-radius: 30px;
+  background: linear-gradient(225deg, #a9b2b9, #c9d4db);
+  box-shadow:  -32px 32px 80px #767d81,
+               32px -32px 80px #ffffff;
+}
+#cuerpo{
+
+}
+#menu_sup{
+  height: 50px;
+}
+#menu_sup ul{
+  padding: 0px;
+}
+#menu_sup ul li{
+  display: inline;
+}
+#menu_sup ul li a{
+  float: left;
+  padding: 15px;
+}
+
+#menu_izq{
+  width: 100px;
+}

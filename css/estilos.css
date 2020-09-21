@@ -5,6 +5,34 @@ footer{
   text-align: center;
   background-color: #4e5255;
 }
+h1{
+  font-family: 'Lobster', cursive;
+  letter-spacing: 5px;
+}
+form{
+  margin : 20px;
+  z-index: 1;
+}
+input, textarea{
+  margin:20px;
+  width: 83%;
+  border: none;
+}
+textarea{
+  height: 200px;
+}
+input[type=submit]{
+  width: 100%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0px 0px 15px 15px ;
+}
+
 .menu{
   background-color: #4e5255;
   font-family: 'Montserrat', sans-serif;
@@ -14,10 +42,7 @@ footer{
   color: white;
   text-decoration: none;
 }
-h1{
-  font-family: 'Lobster', cursive;
-  letter-spacing: 5px;
-}
+
 .neumo{
   border-radius: 30px;
   width: 120px;
@@ -26,6 +51,15 @@ h1{
   box-shadow:  -20px 20px 60px #767d81,
                20px -20px 60px #ffffff;
   z-index: -1;
+  margin-top: 20px;
+}
+.neumo_contacto{
+  border-radius: 30px;
+  width: 120px;
+  height: 300px;
+  background: linear-gradient(225deg, #ffffff, #c9d4db);
+  box-shadow:  -5px 5px 10px #767d81,
+               5px -5px 10px #ffffff;
   margin-top: 20px;
 }
 #cuerpo{
@@ -71,4 +105,12 @@ h1{
 #logo{
   align-items: center;
   display: inline-flex;
+}
+#contacto{
+  width: 300px;
+  height: 450px
+}
+#enviar{
+  width: 300px;
+  height: 50px
 }

@@ -32,6 +32,9 @@ input[type=submit]{
   cursor: pointer;
   border-radius: 0px 0px 15px 15px ;
 }
+p,h1{
+  text-align: center;
+}
 
 .menu{
   background-color: #4e5255;

@@ -65,6 +65,19 @@ p,h1{
                5px -5px 10px #ffffff;
   margin-top: 20px;
 }
+.pagina{
+  display: flex;
+  align-items: center;
+}
+.pagina img{
+  margin: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.pagina h2,p{
+  text-align: center;
+}
 #cuerpo{
   display: flex;
   align-items: flex-start;
@@ -116,4 +129,8 @@ p,h1{
 #enviar{
   width: 300px;
   height: 50px
+}
+#datos{
+  text-align: center;
+  background-color: #4CAF50;
 }

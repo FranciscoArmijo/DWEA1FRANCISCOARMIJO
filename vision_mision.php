@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Visión y Misión</title>
-    <link href="css/estilos.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400&family=Nunito:wght@300;700&display=swap" rel="stylesheet">
     <div class="menu" id="menu_sup">
       <ul>
-        <li><a href="contacto.html">Contáctenos</a></li>
-        <li><a href="vision_mision.html">Visión y Misión</a></li>
-        <li><a href="que_hacemos.html">Que hacemos</a></li>
-        <li><a href="quienes_somos.html">Quienes somos</a></li>
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.php">LOGIN</a></li>
+        <li><a href="contacto.php">CONTÁCTENOS</a></li>
+        <li><a href="vision_mision.php">MISIÓN Y VISIÓN</a></li>
+        <li><a href="que_hacemos.php">QUE HACEMOS</a></li>
+        <li><a href="quienes_somos.php">QUIENES SOMOS</a></li>
+        <li><a href="index.php">INICIO</a></li>
       </ul>
     </div>
   </head>
   <body>
-    <div class="" style="margin:50px">
+    <div class="texto" style="margin:50px">
       <h1>Misión</h1>
       <p>
         Promover el desarrollo artístico-cultural de la comuna, que permita la participación activa y el acceso de la comunidad, a una oferta amplia de bienes y servicios culturales de excelencia artística y técnica, que integre y. brinde una planificación local con una gestión moderna y eficiente, para la implementación de iniciativas innovadoras en una infraestructura de primer nivel. Nuestros objetivos estratégicos priorizan la integración de la comunidad, con énfasis en los grupos vulnerables, localidades apartadas y rurales; la formación y desarrollo de habilidades artísticas y de audiencias, mediante talleres de diversas expresiones artísticas; la difusión efectiva de nuestras actividades y el rescate, salvaguarda y promoción de nuestro patrimonio cultural local.

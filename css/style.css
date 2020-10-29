@@ -1,0 +1,343 @@
+:root{
+  --naranjo: #EB5B1A;
+  --gris_fondo: #F2F2F2;
+  --gris_claro: #BFBFBF;
+  --azul: #020873;
+  --gris_oscuro: #303030;
+}
+body{
+  background-color: var(--gris_fondo);
+  text-align: center;
+}
+footer{
+  margin: 20px;
+  padding: 5px;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  background-color: var(--azul);
+  color: white;
+}
+.contenedor{
+  display: flex;
+  align-items: flex-start;
+  align-items: stretch;
+}
+
+.menu{
+  font-family: 'Commissioner', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.menu a, p, h1, h2, h3 {
+  margin: 0;
+  color: var(--gris_claro);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.menu a:hover{
+  color: var(--azul);
+  font-size: 22px;
+}
+.linea_naranja_h{
+  width: 90%;
+  height: 2px;
+  background-color: var(--naranjo);
+}
+.contenido{
+  margin: 5px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contenido_h{
+  margin: 5px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.titulo{
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: var(--gris_oscuro);
+}
+#menu_sup{
+  height: 90px;
+  width: 100%;
+  border-bottom: 3px solid var(--naranjo);
+}
+#menu_sup ul{
+  padding: 0px;
+}
+#menu_sup ul li{
+  display: inline;
+}
+#menu_sup ul li a{
+  float: right;
+  padding: 10px;
+}
+
+
+#menu_sup li>ul{
+  display:none;
+}
+#menu_sup li:hover>ul{
+      display:inline-block;
+      position:absolute;
+      top:30px;
+      left:0px;
+}
+#menu_sup li, ul{
+  margin: 25px;
+}
+
+#menu_izq{
+  width: 170px;
+  display: flex;
+  height: 90%;
+  border-right: 3px solid var(--naranjo);
+}
+#menu_izq ul{
+  padding: 0px;
+}
+#menu_izq ul li{
+  display: inline;
+}
+#menu_izq ul li a{
+  float: left;
+  padding: 20px;
+}
+/*tarjeta*/
+.imagen_principal{
+  width: auto;
+  height: 500px;
+}
+
+.imagen_circular{
+    border: 7px solid;
+    border-color: var(--azul);
+    margin: 10px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+.tarjeta{
+  border-radius: 7px;
+  margin: 40px;
+  width: 300px;
+  height: 400px;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+.tarjeta h2,p{
+  font-family: 'Nunito', sans-serif;
+}
+.tarjeta h2{
+  color: var(--gris_oscuro)
+}
+.tarjeta:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  transform: translateY(-20px);
+}
+/*galeria*/
+.galeria{
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contenedor_tarjeta{
+  perspective: 900px;
+  margin: 30px;
+}
+.tarjeta_galeria{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+.tarjeta_frente, .tarjeta_back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+.tarjeta_frente, .tarjeta_back{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contenedor_tarjeta:hover .tarjeta_galeria{
+  transform: rotateY(180deg);
+}
+.tarjeta_back{
+  transform: rotateY(180deg);
+}
+.tarjeta_back h1, p{
+  font-family: 'Commissioner', sans-serif;
+  margin: 5px;
+}
+.tarjeta_back h1{
+  color: var(--gris_oscuro);
+}
+.tarjeta_back p{
+  color: var(--azul);
+}
+.like{
+  text-align: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  border: hidden;
+  background-color: var(--gris_fondo);
+  transition: 0.3s;
+}
+
+.like::before{
+
+  font-family: "FontAwesome", sans-serif;
+  content: "\f004";
+  color: var(--gris_claro);
+  font-size: 35px;
+  transition: 0.3s;
+}
+.like:hover::before {
+  color: var(--naranjo);
+  font-size: 55px;
+}
+.texto_enlaces a:hover{
+  color: var(--azul);
+  font-size: 20px;
+}
+.texto_enlaces a, p{
+  font-family: 'Commissioner', sans-serif;
+  margin: 5px;
+}
+.texto_enlaces a{
+  text-decoration: none;
+  font-weight: bold;
+}
+.texto > h1{
+  color: var(--gris_oscuro);
+}
+/*contaco*/
+.contacto{
+  margin: 10px;
+  width:320px;
+  height: 150px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--gris_claro);
+}
+.contacto input[type="text"],input[type="email"],input[type="password"],input[type="submit"], textarea{
+  width: 300px;
+  margin: 5px;
+  font-family: 'Commissioner', sans-serif;
+  border: hidden;
+}
+.contacto input[type="submit"]{
+  color: white;
+  background-color: var(--naranjo);
+}
+.datos_enviados{
+  width: 100%;
+  height: 20px;
+}
+.tarjeta_datos{
+  padding: 30px;
+  width: 400px;
+  border-radius: 7px;
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tarjeta_datos h1, h2, h3, p{
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  margin: 10px;
+}
+.tarjeta_datos h1{
+  color: var(--naranjo);
+}
+/*formularios datos*/
+.formulario_datos{
+  margin: 30px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.formulario_datos label{
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  color: var(--naranjo);
+}
+.formulario_datos input[type='textarea']{
+  height: 200px;
+}
+.formulario_datos input[type='text'],
+  input[type='submit'], select, textarea, input[type='password']
+  , input[type='email']{
+  height: 25px;
+  width: 100%;
+  border: hidden;
+  margin: 5px;
+}
+.formulario_datos input[type='radio']{
+  color: var(--naranjo);
+}
+
+.boton_formularios{
+  height: 40px;
+  color:white;
+  background-color: var(--gris_claro);
+  transition: 0.3s;
+}
+.boton_formularios:hover{
+  background-color: var(--naranjo);
+}
+.fieldset{
+  border: none;
+}
+.legend{
+  color: var(--azul);
+  font-family: 'Commissioner', sans-serif;
+}
+.cont_form{
+  padding: 10px;
+  width: 30%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s;
+}
+.cont_form h3{
+  color: var(--azul);
+}
+.cont_form:hover{
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}

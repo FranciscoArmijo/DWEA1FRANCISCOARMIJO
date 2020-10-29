@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Quienes Somos</title>
-    <link href="css/estilos.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400&family=Nunito:wght@300;700&display=swap" rel="stylesheet">
     <div class="menu" id="menu_sup">
       <ul>
-        <li><a href="contacto.html">Contáctenos</a></li>
-        <li><a href="vision_mision.html">Visión y Misión</a></li>
-        <li><a href="que_hacemos.html">Que hacemos</a></li>
-        <li><a href="quienes_somos.html">Quienes somos</a></li>
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.php">LOGIN</a></li>
+        <li><a href="contacto.php">CONTÁCTENOS</a></li>
+        <li><a href="vision_mision.php">MISIÓN Y VISIÓN</a></li>
+        <li><a href="que_hacemos.php">QUE HACEMOS</a></li>
+        <li><a href="quienes_somos.php">QUIENES SOMOS</a></li>
+        <li><a href="index.php">INICIO</a></li>
       </ul>
     </div>
   </head>
   <body>
-    <div class="" id="cuerpo">
+    <div class="contenido_h">
       <div class="contenido">
-        <img src="img\escultor.jpg" alt="" style="margin:20px">
+        <img src="img\escultor.jpg" alt="" style="margin:1%">
       </div>
-      <div class="" id="contenido">
+      <div class="texto">
         <h1>Quienes Somos</h1>
         <p>
           Dos Arte nace el año 2006 en Vitacura, con el esfuerzo del escultor Javier Stichkin y su padre, el pintor Sergio Stichkin; como una propuesta exclusiva dedicada al arte y la decoración. Una forma de comercializar sus propios trabajos, pero también de ofrecer la oportunidad a diversos artistas nacionales emergentes para exhibir y vender sus creaciones.

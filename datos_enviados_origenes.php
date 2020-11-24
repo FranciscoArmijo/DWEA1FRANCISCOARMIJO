@@ -29,15 +29,13 @@
      include("conex.php");
      /*agregar eliminar modificar usuario*/
      $opcion=$_POST['opcion'];
-     $nombre=$_POST['nombre_usuario'];
-     $rut=$_POST['rut_usuario'];
-     $clave=$_POST['clave_usuario'];
-     $origen=$_POST['origen_usuario'];
-     $nivel=$_POST['nivel_usuario'];
+     $origen=$_POST['nombre_origen'];
+     $descripcion=$_POST['descripcion_origen'];
+
      /*buscar usuario*/
      $link=Conectarse();
      if ($opcion=="guardar") {
-       if (mysql_query("INSERT INTO usuarios(nombre,clave,origen,nivel,rut) values ('".$nombre."','".$clave."','".$origen."','".$nivel."','".$rut."')",$link)) {
+       if (mysql_query("INSERT INTO origenes(origen,descripcion) values ('".$origen."','".$descripcion."')",$link)) {
          echo "<div class='datos_enviados'>
            <h2>LOS DATOS FUERON ENVIADOS EXITOSAMENTE</h2>
          </div>";
@@ -48,12 +46,12 @@
        }
      }else {
        if ($opcion=="modificar") {
-         mysql_query("UPDATE usuarios SET nombre='".$nombre."',clave='".$clave."',origen='".$origen."',nivel='".$nivel."' WHERE rut='".$rut."'",$link);
+         mysql_query("UPDATE origenes SET origen= '".$origen."',descripcion='".$descripcion."'WHERE origen='".$origen."'",$link);
          echo "<div class='datos_enviados'>
            <h2>LOS DATOS FUERON ACTUALIZADOS EXITOSAMENTE</h2>
          </div>";
        }else {
-         mysql_query("DELETE FROM usuarios WHERE rut='".$rut."'",$link);
+         mysql_query("DELETE FROM origenes WHERE origen='".$origen."'",$link);
          echo "<div class='datos_enviados'>
            <h2>LOS DATOS FUERON BORRADOS EXITOSAMENTE</h2>
          </div>";

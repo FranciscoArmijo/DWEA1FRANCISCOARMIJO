@@ -29,15 +29,18 @@
      include("conex.php");
      /*agregar eliminar modificar usuario*/
      $opcion=$_POST['opcion'];
-     $nombre=$_POST['nombre_usuario'];
      $rut=$_POST['rut_usuario'];
-     $clave=$_POST['clave_usuario'];
-     $origen=$_POST['origen_usuario'];
-     $nivel=$_POST['nivel_usuario'];
+     $nombre=$_POST['nombre_usuario'];
+     $apaterno=$_POST['apellido_paterno_usuario'];
+     $amaterno =$_POST['apellido_materno_usuario'];
+     $domicilio=$_POST['domicilio_usuario'];
+     $sexo=$_POST['sexo_usuario'];
+     $fechanac=$_POST['fecha_nacimiento_usuario'];
      /*buscar usuario*/
      $link=Conectarse();
      if ($opcion=="guardar") {
-       if (mysql_query("INSERT INTO usuarios(nombre,clave,origen,nivel,rut) values ('".$nombre."','".$clave."','".$origen."','".$nivel."','".$rut."')",$link)) {
+       if (mysql_query("INSERT INTO datospersonales(rut,nombre,apellido_paterno,apellido_materno,domicilio,sexo,fecha_nacimiento)
+                        values ('".$rut."','".$nombre."','".$apaterno."','".$amaterno."','".$domicilio."','".$sexo."','".$fechanac."')",$link)) {
          echo "<div class='datos_enviados'>
            <h2>LOS DATOS FUERON ENVIADOS EXITOSAMENTE</h2>
          </div>";
@@ -48,12 +51,13 @@
        }
      }else {
        if ($opcion=="modificar") {
-         mysql_query("UPDATE usuarios SET nombre='".$nombre."',clave='".$clave."',origen='".$origen."',nivel='".$nivel."' WHERE rut='".$rut."'",$link);
+         mysql_query("UPDATE datospersonales SET rut= '".$rut."',nombre='".$nombre."',apellido_paterno='".$apaterno."',apellido_materno='".$amaterno."',
+                                                  domicilio='".$domicilio."',sexo='".$sexo."',fecha_nacimiento='".$fechanac."'WHERE rut='".$rut."'",$link);
          echo "<div class='datos_enviados'>
            <h2>LOS DATOS FUERON ACTUALIZADOS EXITOSAMENTE</h2>
          </div>";
        }else {
-         mysql_query("DELETE FROM usuarios WHERE rut='".$rut."'",$link);
+         mysql_query("DELETE FROM datospersonales WHERE rut='".$rut."'",$link);
          echo "<div class='datos_enviados'>
            <h2>LOS DATOS FUERON BORRADOS EXITOSAMENTE</h2>
          </div>";

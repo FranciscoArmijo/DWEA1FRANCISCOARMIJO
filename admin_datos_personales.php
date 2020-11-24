@@ -17,8 +17,8 @@
         <li><a href="#">ADMINISTRAR TABLAS</a>
           <ul>
             <li><a href="admin_datos_personales.php">DATOS PERSONALES</a></li>
-            <li><a href="#">ORIGENES</a></li>
-            <li><a href="#">TRANSACCIONES</a></li>
+            <li><a href="admin_datos_origenes.php">ORIGENES</a></li>
+            <li><a href="transacciones.php">TRANSACCIONES</a></li>
             <li><a href="pagina_admin.php">USUARIOS</a></li>
           </ul>
         </li>

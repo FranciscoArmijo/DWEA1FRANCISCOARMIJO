@@ -6,6 +6,10 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400&family=Nunito:wght@300;700&display=swap" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <?php
+    $nivel=$_GET['nivel'];
+    if ($nivel==1) {
+      ?>
       <div class="menu" id="menu_sup">
         <ul>
           <li><a href="login.php">LOGOUT</a></li>
@@ -24,17 +28,33 @@
           </li>
         </ul>
       </div>
-  </head>
-  <body>
-    <div class="contenedor">
-      <div class="menu" id="menu_izq">
+      <?php
+    }else {
+      ?>
+      <div class="menu" id="menu_sup">
         <ul>
-          <li><a href="enlaces.php">ENLACES</a></li>
-          <li><a href="galeria.php">GALERIA</a></li>
-          <li><a href="nuestro_equipo.php">EQUIPO</a></li>
+          <li><a href="login.php">LOGOUT</a></li>
+          <li><a href="contacto.php">CONTÁCTENOS</a></li>
+          <li><a href="vision_mision.php">MISIÓN Y VISIÓN</a></li>
+          <li><a href="que_hacemos.php">QUE HACEMOS</a></li>
+          <li><a href="quienes_somos.php">QUIENES SOMOS</a></li>
+          <li><a href="index.php">INICIO</a></li>
         </ul>
       </div>
+      <?php
+    }
+     ?>
+
+  </head>
+  <body>
       <div class="contenido_h">
+        <div class="menu" id="menu_izq">
+          <ul>
+            <li><a href="enlaces.php">ENLACES</a></li>
+            <li><a href="galeria.php">GALERIA</a></li>
+            <li><a href="nuestro_equipo.php">EQUIPO</a></li>
+          </ul>
+        </div>
         <div class="cont_form">
           <h3>AGREGAR/MODIFICAR/ELIMINAR</h3>
           <form class="formulario_datos" action="datos_enviados.php" method="post">
@@ -94,8 +114,6 @@
            ?>
         </div>
       </div>
-    </div>
-
   </body>
   <footer>
     <p>

@@ -28,10 +28,10 @@
     $nivel =$fila[1];
     if ($fila[0]==$clave){
       if ($nivel==1) {
-        header('location:pagina_admin.php?rut='.$rut);
+        header('location:home_admin.php?rut='.$rut.'&usuario='.$usuario.'&nivel='.$nivel);
         exit();
       }else {
-        header('location:datos_personales.php?rut='.$rut);
+        header('location:home_usuario.php?rut='.$rut.'&usuario='.$usuario.'&nivel='.$nivel);
         exit();
       }
     }else {

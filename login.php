@@ -21,9 +21,10 @@
       <div class="cont_form">
         <h3>LOG-IN</h3>
         <form class="formulario_datos" action="validar_clave.php" method="post">
-          <input type="text" name="usuario" placeholder="Nombre usuario">
-          <input type="password" name="clave" placeholder="Su clave">
+          <input id="usuario" type="text" name="usuario" placeholder="Nombre usuario" required>
+          <input id="clave" type="password" name="clave" placeholder="Su clave" required>
           <input class="boton_formularios" type="submit" name="entrar" value="ENTRAR">
+          <p class="warning" id="warning"></p>
         </form>
       </div>
     </div>

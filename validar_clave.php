@@ -22,22 +22,56 @@
     $usuario=$_POST['usuario'];
     $clave=$_POST['clave'];
     $link=Conectarse();
-    $consulta= mysql_query("SELECT clave, nivel,rut FROM usuarios WHERE nombre ='".$usuario."'",$link);
+    $consulta= mysql_query("SELECT clave, nivel,rut, origen FROM usuarios WHERE nombre ='".$usuario."'",$link);
     $fila = mysql_fetch_row($consulta);
     $rut= $fila[2];
     $nivel =$fila[1];
+    $origen=$fila[3];
     if ($fila[0]==$clave){
       if ($nivel==1) {
         header('location:home_admin.php?rut='.$rut.'&usuario='.$usuario.'&nivel='.$nivel);
+        $consulta2=mysql_query("INSERT INTO transacciones (transaccion,fecha_transaccion, rut, origen) values ('Inicio de sesión', SYSDATE(),'".$rut."','".$origen."')",$link);
         exit();
       }else {
         header('location:home_usuario.php?rut='.$rut.'&usuario='.$usuario.'&nivel='.$nivel);
+        $consulta2=mysql_query("INSERT INTO transacciones (transaccion,fecha_transaccion, rut, origen) values ('Inicio de sesión', SYSDATE(),'".$rut."','".$origen."')",$link);
         exit();
       }
     }else {
       echo "<h2 class='incorrecto'>clave invalida</h2>";
     }
-
+    /*valida rut*/
+    function validarut($rut){
+      if(strlen($rut)<10){
+        while (strlen($rut)!=10) {
+          $rut= "0".$rut;
+        }
+      }
+      $rut_vector=str_split($rut);
+      $arreglo_numeros=array(3,2,7,6,5,4,3,2);
+      $suma=0;
+      for ($i=0; $i < 8; $i++){
+        $suma+=$arreglo_numeros[$i]*$rut[$i];
+      }
+      $div=$suma/11;
+      $entero=intval($div);
+      $decimal=$div-$entero;
+      $digito=(11-(11*($decimal)));
+      if (strval($digito)=="10") {
+        $digito="k";
+      }
+      if (strval($digito)=="11") {
+        $digito=0;
+      }
+      $largo_rut=strlen($rut);
+      if (strval($digito)==strval($rut[$largo_rut-1])){
+        $validar= true;
+      }else {
+        $validar= false;
+      }
+      return $validar;
+    }
+    /*fin valida rut*/
      ?>
   </body>
   <footer>

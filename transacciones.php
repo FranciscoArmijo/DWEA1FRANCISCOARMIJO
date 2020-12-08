@@ -26,6 +26,20 @@
     </div>
   </head>
   <body>
+    <div class="contenido_h">
+      <div class="cont_form">
+        <form class="formulario_datos" action="buscar_fecha.php" method="post">
+          <h3>BUSCAR POR RANGO DE FECHA</h3>
+          <label for="fecha_inicio">FECHA INICIO</label>
+          <input type="date" name="fecha_inicio" value="" required>
+          <label for="fecha_inicio">FECHA FIN</label>
+          <input type="date" name="fecha_fin" value="" required>
+          <input class="boton_formularios" type="submit" name="" value="BUSCAR">
+        </form>
+        <a href="#miModal" class="linkModal">MOSTRAR TODAS</a>
+      </div>
+    </div>
+    <div id="miModal"class="modal">
       <div class="contenido_h">
         <div class="cont_form">
           <h3>TRANSACCIONES</h3>
@@ -41,8 +55,10 @@
           }
           echo "</p>";
            ?>
+           <a href="#" class="linkModal ">CERRAR</a>
         </div>
       </div>
+    </div>
   </body>
   <footer>
     <p>

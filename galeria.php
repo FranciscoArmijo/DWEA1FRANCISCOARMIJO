@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400&family=Nunito:wght@300;700&display=swap" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <?php
+    error_reporting(0);
     if(isset($_GET['origen'])&&($_GET['rut'])){
       $rut=$_GET['rut'];
       $origen=$_GET['origen'];
@@ -39,7 +40,7 @@
             <p>Bolillo para detalles</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Bolillo metal">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -56,7 +57,7 @@
             <p>Herarmientas metalicas</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Set metalico">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -73,7 +74,7 @@
             <p>15 piezas surtidas</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Set 15 pcs">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -90,7 +91,7 @@
             <p>30 piezas surtidas</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Set 30 pcs">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -107,7 +108,7 @@
             <p>PInceles con punta de goma</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Pincel Goma">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -124,7 +125,7 @@
             <p>Arcilla polymerica</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Sculpey Firm">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -141,7 +142,7 @@
             <p>Arcilla polymerica</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Sculpey Med">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -158,7 +159,7 @@
             <p>Plasticera dura</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like NSP">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -175,7 +176,7 @@
             <p>Plasticera Profesional</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like Monster Clay">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
@@ -192,7 +193,7 @@
             <p>Plasticera Chilena</p>
             <form class="" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
               <input type="hidden" name="like" value="like PLastilina escultor">
-              <input type="hidden" name="rut" value="<?php echo $rut ?>">
+              <input type="hidden" name="rut" value="<?php echo $rut?>">
               <input type="hidden" name="origen" value="<?php echo $origen ?>">
               <button class="like" type="submit"></button>
             </form>
